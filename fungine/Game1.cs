@@ -28,7 +28,7 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         // TODO: use this.Content to load your game content here
-        knightIdle = Content.Load<Texture2D>("knight_idle_spritesheet.png");
+        knightIdle = Content.Load<Texture2D>("knight_idle_spritesheet");
     }
 
     protected override void Update(GameTime gameTime)
