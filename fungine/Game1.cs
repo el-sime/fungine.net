@@ -15,7 +15,7 @@ public class Game1 : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
-        player = new Character();
+        player = new Character("knight_idle_spritesheet");
     }
 
     protected override void Initialize()
