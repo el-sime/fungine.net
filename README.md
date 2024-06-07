@@ -18,4 +18,9 @@ A basic game engine for learning porpuses.
 - Load the spritesheet
 - Draw the image
 
-### 1.2 Setup Frames
+### 1.2 Draw one frame of the spritesheet
+
+- Identify the variables we need
+- Add them as members of the Game class
+- Calculate the base rectangles
+- Calculate the source Rectangle origin
