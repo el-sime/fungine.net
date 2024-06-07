@@ -9,20 +9,13 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     // Character variables:
-    int character_currentFrame = 3;
-    Vector2 character_screenPosition = Vector2.Zero;
-    int character_frameWidth=16;
-    int character_frameHeight=16;
-    float character_scale=2.0f;
-    string character_animations_idle_spritesheetName="knight_idle_spritesheet";
-    int character_animations_idle_spritesheet_cols=6;
-    int character_animations_idle__spritesheet_rows=1;
-    Texture2D character_animations_idle_texture;
+    private Character player;
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        player = new Character();
     }
 
     protected override void Initialize()
@@ -36,7 +29,7 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         // TODO: use this.Content to load your game content here
-        character_animations_idle_texture = Content.Load<Texture2D>(character_animations_idle_spritesheetName);
+        player.LoadContent(Content);
     }
 
     protected override void Update(GameTime gameTime)
@@ -55,17 +48,7 @@ public class Game1 : Game
 
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
-        _spriteBatch.Draw(
-            character_animations_idle_texture, 
-            new Rectangle((int)character_screenPosition.X, (int)character_screenPosition.Y, (int)(character_frameWidth * character_scale), (int)(character_frameHeight * character_scale)),
-            new Rectangle(
-                (character_currentFrame % character_animations_idle_spritesheet_cols) * character_frameWidth, 
-                (character_currentFrame / character_animations_idle_spritesheet_cols) * character_frameWidth,
-                character_frameWidth,
-                character_frameHeight
-            ),
-            Color.White
-            );
+        player.Draw(gameTime, _spriteBatch);
         _spriteBatch.End();
         base.Draw(gameTime);
     }

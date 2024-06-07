@@ -24,3 +24,8 @@ A basic game engine for learning porpuses.
 - Add them as members of the Game class
 - Calculate the base rectangles
 - Calculate the source Rectangle origin
+
+### 1.3
+
+First refactoring. Create a class for the character.
+TDD, Red, Green, Refactor for anything outside MonoGame.
