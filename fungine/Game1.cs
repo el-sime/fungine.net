@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace fungine;
+namespace el_sime.Fungine;
 
 public class Game1 : Game
 {

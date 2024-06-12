@@ -28,4 +28,5 @@ A basic game engine for learning porpuses.
 ### 1.3
 
 First refactoring. Create a class for the character.
-TDD, Red, Green, Refactor for anything outside MonoGame.
+Second refactoring, create the Animation class
+**Hard requirement 1 spritesheet per animation**, for now.
